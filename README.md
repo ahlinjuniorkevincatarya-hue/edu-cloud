@@ -1,6 +1,6 @@
 # ENSAM CLOUD
 
-Plateforme d'accès aux ressources logicielles pour les étudiants ENSAM.
+Plateforme d'accès aux ressources logicielles pour les étudiants .
 
 ## Stack technique
 - HTML / CSS / JavaScript (V1)
