@@ -167,6 +167,29 @@ input[type="password"] {
     text-decoration: none;
 }
 
+.input-password-wrapper {
+    position: relative;
+}
+
+.input-password-wrapper input {
+    width: 100%;
+    padding: 14px 45px 14px 16px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.input-password-wrapper i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
 .checkbox-container {
     display: flex;
     align-items: center;
