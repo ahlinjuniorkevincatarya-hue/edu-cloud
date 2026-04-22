@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Create an account</title>
+</head>
+<body>
+    <div class="register-container">
+
+        <div class="left-register">
+            <h2>Create Account</h2>
+            <p>Use your student credentials</p>
+            
+            <form>
+                <div class="name-row">
+                    <div class="input-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Ahmed">
+                    </div>
+                    <div class="input-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Karimi">
+                    </div>
+                </div>
+                <label for="codeApogee">Code Apogee</label>
+                <input type="number" id="codeApogee" name="codeApogee" placeholder="12345678">
+                <label for="studentMail">Student E-mail</label>
+                <input type="email" id="studentMail" name="studentMail" placeholder="karimi.ahmed@ensam-casa.ma">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="must be 8 characters">
+                <label for="repeatedP">Repeat password</label>
+                <input type="password" id="repeatedP" name="repeatedP" placeholder="must be 8 characters">
+                
+                <button type="submit">
+                    Create Account 
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <div class="divider">
+                    <span>OR REGISTER WITH</span>
+                </div>
+
+                <button type="button">
+                    <i class="fa-brands fa-google"></i>
+                    Continue with ENSAM SSO
+                </button>
+
+            </form>
+
+            <p>Already have an account? <a href="./index.html">Sign in</a></p>
+        
+        </div>
+
+        <div class="right-register">
+
+            <div class="terminal-icon">
+                <i class="fa-solid fa-terminal"></i>
+            </div>
+
+            <span class="label">PRECISION FLUIDITY</span>
+            <h2>Empowering the next generation of engineers.</h2>
+            <p>A redifined workspace that balances new technicality with architectural clarity</p>
+            <div class="server-info">
+                <div class="server-stat">
+                    <span class="stat-label">NETWORK STATUS</span> 
+                    <span class="stat-value">OPTIMIZED</span>
+                </div>
+                <div class="server-stat">
+                    <span class="stat-label">REGION</span>
+                    <span class="stat-value">CASABLANCA-01</span>
+                </div>
+                <div class="server-stat">
+                    <span class="stat-label">STUDENT TIER</span>
+                    <span class="stat-value">V-2.0.4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/register.js"></script>
+</body>
+</html>
