@@ -7,79 +7,123 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>ENSAM CLOUD</title>
 </head>
-<body>
-    <div class="login-container">
+<body class="bg-bg-primary text-white min-h-screen">
+    <div class="flex min-h-screen">
 
-        <div class="left-panel">
+        <div class="w-1/2 p-16 bg-bg-primary flex flex-col min-h-screen">
 
-            <div class="logo">
-                <span class="logo-ensam">ENSAM</span>
-                <span class="logo-cloud">CLOUD</span>
+            <div class="flex items-center gap-2 mb-16">
+                <span class="text-white text-xl font-bold tracking-widest">ENSAM</span>
+                <span class="text-blue-light text-xl font-bold tracking-widest">CLOUD</span>
             </div>
 
-            <span class="label">ENGINEERING WORKSPACE</span>
-            <h1>Your cloud workstation, ready when you are</h1>
-            <p>Acces high-performance computing resources and collaborative engineering tools from any advice, anywhere in the world</p>
+            <span class="text-blue-light text-xs tracking-widest uppercase mb-4 block">ENGINEERING WORKSPACE</span>
+            <h1 class="text-white text-5xl font-extrabold leading-tight mb-6">Your cloud workstation, ready when you are</h1>
+            <p class="text-text-secondary text-base leading-relaxed mb-8">Acces high-performance computing resources and collaborative engineering tools from any advice, anywhere in the world</p>
 
-            <ul>
-                <li><i class="fa-solid fa-bolt"></i> Instant provisioning of CAD-ready instances</li>
-                <li><i class="fa-solid fa-shield"></i> Entreprise-grade encryption for all projects</li>
-                <li><i class="fa-solid fa-users"></i> Real-time collaborationfor student teams</li>
+            <ul class="flex flex-col gap-4 mb-auto list-none">
+                <li class="flex items-center gap-3 text-text-secondary text-sm">
+                    <i class="fa-solid fa-bolt"></i> 
+                    Instant provisioning of CAD-ready instances
+                </li>
+                <li class="flex items-center gap-3 text-text-secondary text-sm">
+                    <i class="fa-solid fa-shield"></i> 
+                    Entreprise-grade encryption for all projects
+                </li>
+                <li class="flex items-center gap-3 text-text-secondary text-sm">
+                    <i class="fa-solid fa-users"></i> 
+                    Real-time collaborationfor student teams
+                </li>
             </ul>
 
-            <div class="copyright">
-                <p>&copy;ENSAM CLOUD - STUDENT EDITION</p>
+            <div class="mt-auto">
+                <p class="text-text-secondary text-xs tracking-widest">&copy;ENSAM CLOUD - STUDENT EDITION</p>
             </div>
 
         </div>
 
-        <div class="right-panel">
+        <div class="w-1/2 p-16 bg-bg-secondary flex flex-col justify-center">
 
-            <span class="label">ACCESS PORTAL</span>
-            <h2>Welcome back</h2>
-            <p>Please enter your credentials to access your workspace.</p>
+            <span class="text-blue-light text-xs tracking-widest uppercase mb-4 block">ACCESS PORTAL</span>
+            <h2 class="text-white text-4xl font-bold mb-2">Welcome back</h2>
+            <p class="text-text-secondary mb-8">Please enter your credentials to access your workspace.</p>
             
-            <form>
+            <form class="flex flex-col gap-4">
 
-                <label for="email"> Email Address</label><br>
-                <input type="email" id="email" name="email" placeholder="student@ensam-cloud.com"><br>
-                
-                <div class="password-header">
-                    <label for="password"> password </label>
-                    <a href="#">Forgot password?</a>
-                </div>
-                <div class="input-password-wrapper">
-                    <input type="password" id="password" name="password"><br>
-                    <i class="fa-solid fa-eye" id="toggle-password"></i>
+                 <div class="flex flex-col gap-1">
+                    <label class="text-text-secondary text-sm">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="student@ensam-cloud.com"
+                        class="w-full px-4 py-3 bg-bg-card border border-border-custom rounded-lg text-white text-sm focus:outline-none focus:border-blue-primary"
+                    >
                 </div>
 
-                <div class="checkbox-container">
+                <!-- Password -->
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center">
+                        <label class="text-text-secondary text-sm">Password</label>
+                        <a href="#" class="text-blue-light text-xs no-underline hover:underline">
+                            Forgot password?
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            class="w-full px-4 py-3 pr-12 bg-bg-card border border-border-custom rounded-lg text-white text-sm focus:outline-none focus:border-blue-primary"
+                        >
+                        <i class="fa-solid fa-eye absolute right-4 top-1/2 -translate-y-1/2 text-text-secondary cursor-pointer" id="toggle-password"></i>
+                    </div>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="flex items-center gap-2 text-text-secondary text-sm">
                     <input type="checkbox" id="keep" name="keep">
-                    <label for="keep">Keep me signed in for 30 days </label><br>
+                    <label for="keep">Keep me signed in for 30 days</label>
                 </div>
 
-                <button type="submit">
+                <!-- Bouton submit -->
+                <button 
+                    type="submit"
+                    class="w-full py-3 bg-blue-primary text-white rounded-lg font-semibold text-base cursor-pointer hover:bg-blue-light transition-colors"
+                >
                     Sign in to Dashboard 
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
-                <div class="divider">
-                    <span>OR CONTINUE WITH </span>
+                <!-- Divider -->
+                <div class="flex items-center gap-4 text-text-secondary text-xs tracking-widest">
+                    <div class="flex-1 h-px bg-border-custom"></div>
+                    <span>OR CONTINUE WITH</span>
+                    <div class="flex-1 h-px bg-border-custom"></div>
                 </div>
 
-                <button type="button">
+                <!-- Bouton SSO -->
+                <button 
+                    type="button"
+                    class="w-full py-3 bg-transparent border border-border-custom text-white rounded-lg font-medium flex items-center justify-center gap-2 cursor-pointer hover:border-blue-primary transition-colors"
+                >
                     <i class="fa-brands fa-google"></i>
                     Continue with ENSAM SSO
                 </button>
 
             </form>
 
-            <p> New to the platform? <a href="./register.html">Create an account</a></p>
+            <!-- Lien inscription -->
+            <p class="text-text-secondary text-sm text-center mt-6">
+                New to the platform? 
+                <a href="./register.html" class="text-blue-light font-semibold no-underline hover:underline">
+                    Create an account
+                </a>
+            </p>
 
         </div>
     </div>
 
     <script src="./assets/js/main.js"></script>
-
 </body>
 </html>

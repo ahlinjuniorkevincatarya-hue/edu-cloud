@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-server"></i><span> Sessions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-folder"></i><span> Files</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-bell"></i><span> Alerts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-user"></i><span> Profile</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa-solid fa-gear"></i><span> Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>Home</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="alert-banner">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span>System Maintenance: MAR-Casablanca node will be offline for 15 minutes starting at 02:00 AM UTC.</span>
+                <i class="fa-solid fa-xmark alert-close"></i>
+            </div>
+            <div class="content-grid">
+                <div class="center-column">
+                    <div class="workspace-card">
+                        <div class="workspace-info">
+                            <span class="workspace-label">CURRENT WORKSPACE</span>
+                            <h3>Deep Learning Lab 04</h3>
+                            <div class="workspace-stats">
+                                <div>
+                                    <span>UPTIME</span>
+                                    <span>04:12:33</span>
+                                </div>
+                                <div>
+                                    <span>GPU USAGE</span>
+                                    <span>88%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="workspace-actions">
+                            <span class="status-badge"> ACTIVE</span>
+                            <button class="open-terminal-btn">Open Terminal</button>
+                        </div>
+                    </div>
+
+                    <div class="sessions-section">
+                        <div class="sessions-header">
+                            <h3>Start New Session</h3>
+                            <a href="#">VIEW TEMPLATES</a>
+                        </div>
+                        <div class="services-grid">
+                            <div class="service-card" data-service="vscode">
+                                <div class="service-icon">
+                                    <i class="devicon-vscode-plain colored"></i>
+                                </div>
+                                <span class="service-name">VS Code</span>
+                                <span class="service-type">WEB-IDE</span>
+                            </div>
+                            <div class="service-card" data-service="matlab">
+                                <div class="service-icon">
+                                    <i class="devicon-matlab-plain colored"></i>
+                                </div>
+                                <span class="service-name">MATLAB</span>
+                                <span class="service-type">R2023B</span>
+                            </div>
+                            <div class="service-card" data-service="jupyter">
+                                <div class="service-icon">
+                                    <i class="devicon-jupyter-plain colored"></i>
+                                </div>
+                                <span class="service-name">Jupyter</span>
+                                <span class="service-type">PYTHON 3.10</span>
+                            </div>
+                            <div class="service-card" data-service="terminal">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-terminal"></i>
+                                </div>
+                                <span class="service-name">Terminal</span>
+                                <span class="service-type">BASH/ZSH</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history-section">
+                        <div class="history-header">
+                            <h3>Recent History</h3>
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="history-icon">
+                                    <i class="devicon-vscode-plain colored"></i>
+                                </div>
+                                <div class="history-info">
+                                    <span class="history-name">Final Project Compiler</span>
+                                    <span class="history-meta">VS CODE · YESTERDAY</span>
+                                </div>
+                                <div class="history-stats">
+                                    <span class="history-size">2.4 GB</span>
+                                    <span class="history-status archived">Archived</span>
+                                </div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-icon">
+                                    <i class="devicon-jupyter-plain colored"></i>
+                                </div>
+                                <div class="history-info">
+                                    <span class="history-name">Neural Net Training</span>
+                                    <span class="history-meta">JUPYTER · OCT 24</span>
+                                </div>
+                                <div class="history-stats">
+                                    <span class="history-size">12.1 GB</span>
+                                    <span class="history-status snapshot">Snapshot</span>
+                                </div>
+                            </div>
+                            <div class="history-item">
+                                <div class="history-icon">
+                                    <i class="devicon-matlab-plain"></i>
+                                </div>
+                                <div class="history-info">
+                                    <span class="history-name">Control Systems Lab</span>
+                                    <span class="history-meta">MATLAB  · OCT 22</span>
+                                </div>
+                                <div class="history-stats">
+                                    <span class="history-size">1.8 GB</span>
+                                    <span class="history-status expired">Expired</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <div class="cloud-quota">
+                        <h3>Cloud Quota</h3>
+                        <div class="quota-item">
+                            <div class="quota-header">
+                                <span>COMPUTE THREADS</span>
+                                <span>12 / 16</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill blue"></div>
+                            </div>
+                        </div>
+                        <div class="quota-item">
+                            <div class="quota-header">
+                                <span >GPU VRAM</span>
+                                <span>4.1 / 8 GB</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill green"></div>
+                            </div>
+                        </div>
+                        <div class="quota-item">
+                            <div class="quota-header">
+                                <span>NETWORK BANDWIDTH</span>
+                                <span>0.8 / 1 Gbps</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill gray"></div>
+                            </div>
+                        </div>
+                        <button class="request-extension-btn">Request Extension</button>
+                    </div>
+
+                    <div class="infrastructure">
+                        <div class="infra-header">
+                            <h3>infrastructure</h3>
+                            <span class="status-stable">● STABLE</span>
+                        </div>
+                        <div class="infra-info">
+                            <i class="fa-solid fa-globe"></i>
+                            <div>
+                                <span class="infra-name">MAR-Casablanca</span>
+                                <span class="infra-meta">Latency: 12ms · Lat: 33.57 Lon: -7.58</span>
+                            </div>
+                        </div>
+                        <div class="infra-bar">
+                            <div class="infra-fill"></div>
+                        </div>
+                        <span class="infra-uptime">99.98% UPTIME LAST 24H</span>
+                    </div>
+
+                    <div class="quick-actions">
+                        <h3>Quick Actions</h3>
+                        <div class="actions-grid">
+                            <div class="action-item">
+                                <i class="fa-solid fa-file-circle-plus"></i>
+                                <span>New File</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-solid fa-rotate"></i>
+                                <span>Sync All</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-solid fa-share-nodes"></i>
+                                <span>Collab</span>
+                            </div>
+                            <div class="action-item">
+                                <i class="fa-solid fa-headset"></i>
+                                <span>Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./assets/js/dashboard.js"></script>
+</body>
+</html>
