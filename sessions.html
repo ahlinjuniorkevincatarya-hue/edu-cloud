@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/sessions.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>Sessions</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="./dashboard.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./sessions.html"><i class="fa-solid fa-server"></i><span> Sessions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./files.html"><i class="fa-solid fa-folder"></i><span> Files</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./alerts.html"><i class="fa-solid fa-bell"></i><span> Alerts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./profile.html"><i class="fa-solid fa-user"></i><span> Profile</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./settings.html"><i class="fa-solid fa-gear"></i><span> Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left"  onclick="window.location.href='./dashboard.html'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>Sessions</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="sessions-content">
+                <div class="sessions-left">
+                    <div class="running-section">
+                        <span class="section-label">RUNNING NOW</span>
+                        <div class="session-card active-session">
+                            <div class="session-icon">
+                                <i class="devicon-vscode-plain colored"></i>
+                            </div>
+                            <div class="session-info">
+                                <h3>VS Code</h3>
+                                <span class="session-project">Project_Signal</span>
+                                <span class="session-meta">MAR-CASABLANCA · 4 VCPU · 8 GB RAM</span>
+                            </div>
+                            <div class="session-timer">
+                                <span class="timer-value">02:44:12</span>
+                                <span class="timer-limit">OF 03:00:00 LIMIT</span>
+                                <span class="session-status running">● RUNNING</span>
+                            </div>
+                            <button class="connect-btn">Connect</button>
+                        </div>
+
+                        <div class="session-card active-session">
+                            <div class="session-icon">
+                                <i class="devicon-jupyter-plain colored"></i>
+                            </div>
+                            <div class="session-info">
+                                <h3>Jupyter Lab</h3>
+                                <span class="session-project">DataAnalysis_v2</span>
+                                <span class="session-meta">MAR-CASABLANCA · 2 VCPU · 4 GB RAM</span>
+                            </div>
+                            <div class="session-timer">    
+                                <span class="timer-value">00:15:45</span>
+                                <span class="timer-limit">OF 02:00:00 LIMIT</span>
+                                <span class="session-status running">● RUNNING</span>
+                            </div>
+                            <button class="connect-btn">Connect</button>
+                        </div>
+                    </div>
+
+                    <div class="daily-usage">
+                        <div class="daily-header">
+                            <span class="section-label">DAILY TIME USAGE</span>
+                            <span class="daily-value">4h 15m / 8h 00m</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:53%"></div>
+                        </div>
+                    </div>
+
+                    <div class="recent-history">
+                        <span class="section-label">RECENT HISTORY</span>
+                        <div class="history-card">
+                            <div class="history-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="history-info">
+                                <span class="history-name">VS CODE</span>
+                                <span class="history-file">SIGNAL_PROCESSING.PY</span>
+                            </div>
+                            <span class="history-duration">1h 45m</span>
+                            <span class="history-status saved">SAVED</span>
+                            <button class="resume-btn">Resume</button>
+                        </div>
+                        <div class="history-card">
+                            <div class="history-icon">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="history-info">
+                                <span class="history-name">PostgreSQL Client</span>
+                                <span class="history-file"> DB_DUMP_MAIN.SQL</span>
+                            </div>
+                            <span class="history-duration">0h 28m</span>
+                            <span class="history-status saved">SAVED</span>
+                            <button class="resume-btn">Resume</button>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="sessions-right">
+                    <div class="quota-overview">
+                        <span class="section-label">QUOTA OVERVIEW</span>
+                        <div class="quota-row">
+                            <div class="quota-label">
+                                <i class="fa-solid fa-triangle-exclamation" style="color: #e74c3c"></i>
+                                <span>Storage</span>
+                            </div>
+                            <span class="quota-value">68.2 GB / 100 GB</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 68%; background-color: #e74c3c"></div>
+                        </div>
+                        <div class="quota-row">
+                            <span>RAM</span>
+                            <span class="quota-value">4.1 GB / 16 GB</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill blue" style="width: 26%"></div>
+                        </div>
+                        <div class="quota-row">
+                            <span>Compute Time</span>
+                            <span class="quota-value">80% Usage</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%; background-color: #8b5cf6"></div>
+                        </div>
+                    </div>
+
+                    <!-- Server Status -->
+                    <div class="server-status">
+                        <span class="section-label">SERVER STATUS</span>
+                        <div class="server-card">
+                            <div class="server-info">
+                                <i class="fa-solid fa-server"></i>
+                                <span class="server-name">MAR-Casablanca</span>
+                                <span class="server-active">● ACTIVE</span>
+                            </div>
+                            <div class="server-stats">
+                                <div>
+                                    <span class="stat-label-sm">LATENCY</span>
+                                    <span class="stat-value-lg">12ms</span>
+                                </div>
+                                <div>
+                                    <span class="stat-label-sm">UPTIME</span>
+                                    <span class="stat-value-lg">99.8%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- This Month -->
+                    <div class="this-month">
+                        <span class="section-label">THIS MONTH</span>
+                        <div class="month-stats">
+                            <div class="month-row">
+                                <span>Total Sessions</span>
+                                <span class="month-value">47</span>
+                            </div>
+                            <div class="month-row">
+                                <span>Compute Time</span>
+                                <span class="month-value">38h 30m</span>
+                            </div>
+                            <div class="month-row">
+                                <span>Top App</span>
+                                <span class="month-value highlight">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Start a Session -->
+                    <div class="start-session">
+                        <span class="section-label">START A SESSION</span>
+                        <div class="quick-services">
+                            <div class="quick-service-item">
+                                <i class="devicon-vscode-plain colored"></i>
+                                <div>
+                                    <span class="qs-name">VS Code</span>
+                                    <span class="qs-specs">8GB / 4VCPU</span>
+                                </div>
+                                <i class="fa-solid fa-rocket qs-launch"></i>
+                            </div>
+                            <div class="quick-service-item">
+                                <i class="devicon-jupyter-plain colored"></i>
+                                <div>
+                                    <span class="qs-name">Jupyter</span>
+                                    <span class="qs-specs">4GB / 2VCPU</span>
+                                </div>
+                                <i class="fa-solid fa-rocket qs-launch"></i>
+                            </div>
+                            <div class="quick-service-item">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <div>
+                                    <span class="qs-name">DBeaver</span>
+                                    <span class="qs-specs">2GB / 1VCPU</span>
+                                </div>
+                                <i class="fa-solid fa-rocket qs-launch"></i>
+                            </div>
+                            <div class="quick-service-item">
+                                <i class="fa-solid fa-globe"></i>
+                                <div>
+                                    <span class="qs-name">Browser</span>
+                                    <span class="qs-specs">4GB / 2VCPU</span>
+                                </div>
+                                <i class="fa-solid fa-rocket qs-launch"></i>
+                            </div>
+                        </div>
+                        <button class="browse-all-btn">BROWSE ALL TOOLS</button>
+                    </div>
+
+                </div>
+            </div>
+        </main>    
+    </div>  
+    <script src="./assets/js/sessions.js"></script>  
+</body>
+</html>
