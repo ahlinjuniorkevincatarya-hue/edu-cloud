@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="./dashboard.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./sessions.html"><i class="fa-solid fa-server"></i><span>Sessions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./files.html"><i class="fa-solid fa-folder"></i><span>Files</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./alerts.html"><i class="fa-solid fa-bell"></i><span>Alerts</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./profile.html"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left" onclick="window.location.href='./dashboard.html'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>User Profile</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="profile-content">
+
+                <!-- Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <span>AK</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Ahmed Karimi</h3>
+                        <span class="profile-email">ahmed.karimi@ensam-casablanca.ma</span>
+                        <span class="profile-dept">DEPARTMENT OF COMPUTER ENGINEERING</span>
+                    </div>
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+
+                <!-- Settings Grid -->
+                <div class="profile-grid">
+
+                    <!-- Account -->
+                    <div class="profile-section">
+                        <span class="section-label">ACCOUNT</span>
+                        <div class="profile-item">
+                            <div class="profile-item-icon blue">
+                                <i class="fa-solid fa-user-pen"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Edit Personal Information</span>
+                                <span class="profile-item-desc">Update your name, bio, and avatar</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right profile-item-arrow"></i>
+                        </div>
+                        <div class="profile-item">
+                            <div class="profile-item-icon green">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Security & Privacy</span>
+                                <span class="profile-item-desc">Two-factor auth and session logs</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right profile-item-arrow"></i>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="profile-section">
+                        <span class="section-label">PREFERENCES</span>
+                        <div class="profile-item">
+                            <div class="profile-item-icon purple">
+                                <i class="fa-solid fa-moon"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Dark Mode</span>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="dark-mode-toggle" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="profile-item">
+                            <div class="profile-item-icon amber">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Notifications</span>
+                                <span class="profile-item-desc">Control email and push alerts</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right profile-item-arrow"></i>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="profile-section">
+                        <span class="section-label">SUPPORT</span>
+                        <div class="profile-item">
+                            <div class="profile-item-icon gray">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Documentation</span>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square profile-item-arrow"></i>
+                        </div>
+                        <div class="profile-item">
+                            <div class="profile-item-icon gray">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title">Help Center</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right profile-item-arrow"></i>
+                        </div>
+                    </div>
+
+                    <!-- Danger Zone -->
+                    <div class="profile-section danger-section">
+                        <span class="section-label danger-label">DANGER ZONE</span>
+                        <div class="profile-item danger-item">
+                            <div class="profile-item-icon red">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </div>
+                            <div class="profile-item-info">
+                                <span class="profile-item-title danger-title">Sign Out</span>
+                                <span class="profile-item-desc">End your current session safely</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <div class="profile-footer">
+                    <span>ENSAM CLOUD BUILD 2.4.0-STABLE — LAST LOGIN: 2023-10-24 14:22 GMT</span>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="./assets/js/profile.js"></script>
+</body>
+</html>

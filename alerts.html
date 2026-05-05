@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/alerts.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Alerts</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="./dashboard.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./sessions.html"><i class="fa-solid fa-server"></i><span>Sessions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./files.html"><i class="fa-solid fa-folder"></i><span>Files</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./alerts.html"><i class="fa-solid fa-bell"></i><span>Alerts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./profile.html"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left" onclick="window.location.href='./dashboard.html'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>Alerts</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="alerts-content">
+
+                <!-- Header -->
+                <div class="alerts-header">
+                    <div class="alerts-tabs">
+                        <button class="alert-tab active-tab" data-filter="all">All</button>
+                        <button class="alert-tab" data-filter="unread">Unread</button>
+                        <button class="alert-tab" data-filter="system">System</button>
+                        <button class="alert-tab" data-filter="session">Session</button>
+                        <button class="alert-tab" data-filter="quota">Quota</button>
+                    </div>
+                    <button class="mark-all-btn">Mark all as read</button>
+                </div>
+
+                <!-- Alerts List -->
+                <div class="alerts-list">
+
+                    <div class="alert-item unread system">
+                        <div class="alert-icon red">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">System Maintenance</span>
+                            <span class="alert-desc">MAR-Casablanca node will be offline for 15 minutes starting at 02:00 AM UTC.</span>
+                            <span class="alert-time">2 minutes ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <span class="unread-dot"></span>
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                    <div class="alert-item unread quota">
+                        <div class="alert-icon amber">
+                            <i class="fa-solid fa-hard-drive"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">Storage Quota Warning</span>
+                            <span class="alert-desc">You have used 68.2 GB out of 100 GB. Consider cleaning up old files.</span>
+                            <span class="alert-time">1 hour ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <span class="unread-dot"></span>
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                    <div class="alert-item unread session">
+                        <div class="alert-icon blue">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">Session Expiring Soon</span>
+                            <span class="alert-desc">Your VS Code session "Projet_Signal" will expire in 15 minutes.</span>
+                            <span class="alert-time">3 hours ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <span class="unread-dot"></span>
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                    <div class="alert-item system">
+                        <div class="alert-icon green">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">System Update Complete</span>
+                            <span class="alert-desc">ENSAM CLOUD has been updated to version 2.4.0-STABLE successfully.</span>
+                            <span class="alert-time">Yesterday</span>
+                        </div>
+                        <div class="alert-actions">
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                    <div class="alert-item session">
+                        <div class="alert-icon blue">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">Session Saved</span>
+                            <span class="alert-desc">Your Jupyter Lab session "DataAnalysis_v2" has been saved as a snapshot.</span>
+                            <span class="alert-time">2 days ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                    <div class="alert-item quota">
+                        <div class="alert-icon green">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="alert-info">
+                            <span class="alert-title">Quota Extended</span>
+                            <span class="alert-desc">Your compute time quota has been extended by 10 hours by your administrator.</span>
+                            <span class="alert-time">3 days ago</span>
+                        </div>
+                        <div class="alert-actions">
+                            <i class="fa-solid fa-xmark alert-dismiss"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="./assets/js/alerts.js"></script>
+</body>
+</html>

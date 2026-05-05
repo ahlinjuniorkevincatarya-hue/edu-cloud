@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/files.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <title>Files</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="./dashboard.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./sessions.html"><i class="fa-solid fa-server"></i><span> Sessions</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./files.html"><i class="fa-solid fa-folder"></i><span> Files</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./alerts.html"><i class="fa-solid fa-bell"></i><span> Alerts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./profile.html"><i class="fa-solid fa-user"></i><span> Profile</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./settings.html"><i class="fa-solid fa-gear"></i><span> Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>My Files</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="files-content">
+                <div class="files-main">
+                    <div class="files-section">
+                        <div class="files-section-header">
+                            <div>
+                                <span class="section-label">QUICK ACCESS</span>
+                                <h3>Recently Opened</h3>
+                            </div>
+                        </div>
+                        <div class="recent-files-grid">
+                            <div class="recent-file-card">
+                                <div class="file-icon doc">
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+                                <span class="file-name">model_v2_weights...</span>
+                                <span class="file-time">2 hours ago</span>
+                            </div>
+                            <div class="recent-file-card">
+                                <div class="file-icon code">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <span class="file-name">config_dev.json</span>
+                                <span class="file-time">5 hours ago</span>
+                            </div>
+                            <div class="recent-file-card">
+                                <div class="file-icon table">
+                                    <i class="fa-solid fa-table"></i>
+                                </div>
+                                <span class="file-name">dataset_final.csv</span>
+                                <span class="file-time">Yesterday</span>
+                            </div>
+                            <div class="recent-file-card">
+                                <div class="file-icon code">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <span class="file-name">main_routine.py</span>
+                                <span class="file-time">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="files-section">
+                        <div class="files-section-header">
+                            <div>
+                                <span class="section-label">WORKSPACE</span>
+                                <h3>Folders</h3>
+                            </div>
+                        </div>
+                        <div class="folders-grid">
+                            <div class="folder-card">
+                                <i class="fa-solid fa-folder"></i>
+                                <span class="folder-name">Lab_Reports</span>
+                                <span class="folder-count">12 ITEMS</span>
+                            </div>
+                            <div class="folder-card">
+                                <i class="fa-solid fa-folder"></i>
+                                <span class="folder-name">Python_Scripts</span>
+                                <span class="folder-count">45 ITEMS</span>
+                            </div>
+                            <div class="folder-card">
+                                <i class="fa-solid fa-folder"></i>
+                                <span class="folder-name">Archives_2023</span>
+                                <span class="folder-count">8 ITEMS</span>
+                            </div>
+                            <div class="folder-card">
+                                <i class="fa-solid fa-folder"></i>
+                                <span class="folder-name">Media_Assets</span>
+                                <span class="folder-count">29 ITEMS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="files-section">
+                        <div class="files-section-header">
+                            <div>
+                                <span class="section-label">REPOSITORY</span>
+                                <h3>Files</h3>
+                            </div>
+                        </div>
+                        <div class="files-table">
+                            <div class="files-table-header">
+                                <span>NAME</span>
+                                <span>SIZE</span>
+                                <span>MODIFIED</span>
+                                <span>TYPE</span>
+                                <span></span>
+                            </div>
+                            <div class="file-row active-row">
+                                <div class="file-row-name">
+                                    <div class="file-icon-sm python">
+                                        <i class="fa-solid fa-code"></i>
+                                    </div>
+                                    <div>
+                                        <span class="file-row-title">signal_processing.py</span>
+                                        <span class="file-row-path">projects / DSP_Module</span>
+                                    </div>
+                                </div>
+                                 <span class="file-row-size">2.4 MB</span>
+                                <span class="file-row-date">Oct 12, 2023</span>
+                                <span class="file-badge python">PYTHON</span>
+                                <i class="fa-solid fa-ellipsis-vertical file-menu"></i>
+                            </div>
+                            <div class="file-row">
+                                <div class="file-row-name">
+                                    <div class="file-icon-sm excel">
+                                        <i class="fa-solid fa-table"></i>
+                                    </div>
+                                    <div>
+                                        <span class="file-row-title">research_data_v1.xlsx</span>
+                                        <span class="file-row-path">Documents / Research</span>
+                                    </div>
+                                </div>
+                                <span class="file-row-size">15.8 MB</span>
+                                <span class="file-row-date">Oct 11, 2023</span>
+                                <span class="file-badge excel">SPREADSHEET</span>
+                                <i class="fa-solid fa-ellipsis-vertical file-menu"></i>
+                            </div>
+                            <div class="file-row">
+                                <div class="file-row-name">
+                                    <div class="file-icon-sm pdf">
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                    </div>
+                                    <div>
+                                        <span class="file-row-title">semester_project.pdf</span>
+                                        <span class="file-row-path">Documents / Courses</span>
+                                    </div>
+                                </div>
+                                    <span class="file-row-size">4.1 MB</span>
+                                    <span class="file-row-date">Oct 09, 2023</span>
+                                    <span class="file-badge pdf">DOCUMENT</span>
+                                    <i class="fa-solid fa-ellipsis-vertical file-menu"></i>
+                            </div>
+                        </div>
+                        <div class="files-pagination">
+                            <span class="pagination-btns">SHOWING 1-10 OF 128 ITEMS</span>
+                            <div class="pagination-btns">
+                                <button class="page-btn">‹</button>
+                                <button class="page-btn active-page">1</button>
+                                <button class="page-btn">2</button>
+                                <button class="page-btn">3</button>
+                                <button class="page-btn">›</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="files-sidebar">
+                    <div class="file-preview">
+                        <div class="preview-empty">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>NO PREVIEW AVAILABLE</span>
+                        </div>
+                    </div>
+                    <div class="file-details">
+                        <h3 class="file-details-name">signal_processing.py</h3>
+                        <span class="file-details-type">PYTHON SCRIPT</span>
+                        <div class="file-metadata">
+                            <span class="section-label">METADATA</span>
+                            <div class="metadata-row">
+                                <span>Size</span>
+                                <span>2.4 MB</span>
+                            </div>
+                            <div class="metadata-row">
+                                <span>Created</span>
+                                <span>Sep 28, 2023</span>
+                            </div>
+                            <div class="metadata-row">
+                                <span>Modified</span>
+                                <span>Oct 12, 2023</span>
+                            </div>
+                            <div class="metadata-row">
+                                <span>Owner</span>
+                                <span>Ahmed</span>
+                            </div>
+                        </div>
+                        <div class="file-capabilities">
+                            <span class="section-label">CAPABILITIES</span>
+                            <div class="capabilities-tags">
+                                <span class="capability-tag">EXECUTABLE</span>
+                                <span class="capability-tag">READ-ONLY</span>
+                            </div>
+                        </div>
+                        <button class="download-btn">
+                            <i class="fa-solid fa-download"></i>
+                            Download
+                        </button>
+                        <button class="delete-btn">
+                            <i class="fa-solid fa-trash"></i>
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>    
+    </div>
+    
+    <script src="./assets/js/files.js"></script>
+</body>
+</html>

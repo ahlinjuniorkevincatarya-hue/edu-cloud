@@ -1,0 +1,403 @@
+/* ===== LAYOUT ===== */
+.files-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 24px;
+    padding: 24px;
+}
+
+.files-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ===== SECTIONS ===== */
+.files-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.files-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.files-section-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== RECENT FILES GRID ===== */
+.recent-files-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.recent-file-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.recent-file-card:hover {
+    border-color: var(--blue-primary);
+    transform: translateY(-2px);
+}
+
+.file-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.file-icon.doc   { background-color: #1a3a5c; color: #4d9fff; }
+.file-icon.code  { background-color: #1a3a2c; color: #2ecc71; }
+.file-icon.table { background-color: #1a3a1a; color: #27ae60; }
+
+.file-name {
+    color: var(--text-primary);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.file-time {
+    color: var(--text-secondary);
+    font-size: 11px;
+}
+
+/* ===== FOLDERS GRID ===== */
+.folders-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.folder-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.folder-card:hover {
+    border-color: var(--blue-primary);
+    transform: translateY(-2px);
+}
+
+.folder-card i {
+    font-size: 36px;
+    color: var(--blue-primary);
+}
+
+.folder-name {
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.folder-count {
+    color: var(--text-secondary);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* ===== FILES TABLE ===== */
+.files-table {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.files-table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+    padding: 8px 12px;
+    color: var(--text-secondary);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.file-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-row:hover {
+    background-color: var(--bg-secondary);
+}
+
+.file-row.active-row {
+    background-color: var(--bg-secondary);
+    border-left: 2px solid var(--blue-primary);
+}
+
+.file-row-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.file-icon-sm {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.file-icon-sm.python { background-color: #1a3a5c; color: #4d9fff; }
+.file-icon-sm.excel  { background-color: #1a3a1a; color: #27ae60; }
+.file-icon-sm.pdf    { background-color: #3a1a1a; color: #e74c3c; }
+
+.file-row-title {
+    color: var(--blue-light);
+    font-size: 14px;
+    display: block;
+}
+
+.file-row-path {
+    color: var(--text-secondary);
+    font-size: 11px;
+    display: block;
+}
+
+.file-row-size,
+.file-row-date {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.file-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.file-badge.python { background-color: #1a3a5c; color: #4d9fff; }
+.file-badge.excel  { background-color: #1a3a1a; color: #27ae60; }
+.file-badge.pdf    { background-color: #3a1a1a; color: #e74c3c; }
+
+.file-menu {
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+/* ===== PAGINATION ===== */
+.files-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.pagination-btns {
+    display: flex;
+    gap: 4px;
+}
+
+.page-btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.page-btn:hover {
+    border-color: var(--blue-primary);
+    color: var(--blue-light);
+}
+
+.page-btn.active-page {
+    background-color: var(--blue-primary);
+    border-color: var(--blue-primary);
+    color: white;
+}
+
+/* ===== FILE SIDEBAR ===== */
+.files-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.file-preview {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+}
+
+.preview-empty i {
+    font-size: 32px;
+}
+
+.preview-empty span {
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.file-details {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.file-details-name {
+    font-size: 15px;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.file-details-type {
+    color: var(--blue-light);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.file-metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.metadata-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.metadata-row span:last-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.file-capabilities {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.capabilities-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.capability-tag {
+    padding: 4px 8px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--blue-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.download-btn:hover {
+    background-color: var(--blue-light);
+}
+
+.delete-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+}

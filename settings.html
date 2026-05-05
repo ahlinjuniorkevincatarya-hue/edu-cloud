@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/dashboard.css" rel="stylesheet">
+    <link href="./assets/css/settings.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Settings</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-ensam">ENSAM</span>
+                    <span class="logo-cloud">CLOUD</span>
+                </div>
+                <i class="fa-solid fa-arrow-right sidebar-toggle" id="sidebar-toggle"></i>
+            </div>
+            <span class="sidebar-edition">STUDENT EDITION</span>
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="./dashboard.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./sessions.html"><i class="fa-solid fa-server"></i><span>Sessions</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./files.html"><i class="fa-solid fa-folder"></i><span>Files</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./alerts.html"><i class="fa-solid fa-bell"></i><span>Alerts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./profile.html"><i class="fa-solid fa-user"></i><span>Profile</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="./settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span>RAM USAGE</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span>STORAGE QUOTA</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="signout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Sign Out</span>
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left" onclick="window.location.href='./dashboard.html'">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Dashboard</span>
+                </div>
+                <h2>Settings</h2>
+                <div class="topbar-right">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="settings-content">
+
+                <!-- Appearance -->
+                <div class="settings-section">
+                    <span class="section-label">APPEARANCE</span>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Theme</span>
+                            <span class="settings-item-desc">Choose your preferred theme</span>
+                        </div>
+                        <div class="theme-selector">
+                            <button class="theme-btn active-theme" data-theme="dark">Dark</button>
+                            <button class="theme-btn" data-theme="light">Light</button>
+                            <button class="theme-btn" data-theme="system">System</button>
+                        </div>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Language</span>
+                            <span class="settings-item-desc">Select your interface language</span>
+                        </div>
+                        <select class="settings-select">
+                            <option>English</option>
+                            <option>Français</option>
+                            <option>العربية</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Notifications -->
+                <div class="settings-section">
+                    <span class="section-label">NOTIFICATIONS</span>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Email Notifications</span>
+                            <span class="settings-item-desc">Receive session and quota alerts by email</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Push Notifications</span>
+                            <span class="settings-item-desc">Browser push notifications</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Session Expiry Warning</span>
+                            <span class="settings-item-desc">Alert 15 minutes before session ends</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Session -->
+                <div class="settings-section">
+                    <span class="section-label">SESSION</span>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Default Session Duration</span>
+                            <span class="settings-item-desc">Maximum time per session</span>
+                        </div>
+                        <select class="settings-select">
+                            <option>1 hour</option>
+                            <option selected>2 hours</option>
+                            <option>3 hours</option>
+                            <option>4 hours</option>
+                        </select>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Auto-save Snapshots</span>
+                            <span class="settings-item-desc">Automatically save session every 30 min</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="settings-section">
+                    <span class="section-label">SECURITY</span>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Two-Factor Authentication</span>
+                            <span class="settings-item-desc">Add an extra layer of security</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-item">
+                        <div class="settings-item-info">
+                            <span class="settings-item-title">Active Sessions</span>
+                            <span class="settings-item-desc">Manage your connected devices</span>
+                        </div>
+                        <button class="settings-btn">Manage</button>
+                    </div>
+                </div>
+
+                <!-- Save -->
+                <div class="settings-actions">
+                    <button class="save-btn">Save Changes</button>
+                    <button class="reset-btn">Reset to Default</button>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="./assets/js/settings.js"></script>
+</body>
+</html>
