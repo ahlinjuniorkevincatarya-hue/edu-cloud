@@ -6,7 +6,7 @@ const Topbar = ({ title, showBack = true }) => {
     const navigate = useNavigate();
 
     return (
-        <header className="h-16 border-b border-black/10 dark:border-white/10 pl-16 md:pl-6 pr-6 flex items-center justify-between bg-white dark:bg-[#0B0F19] transition-colors">
+        <header className="h-16 border-b border-gray-200 dark:border-white/10 pl-16 md:pl-6 pr-6 flex items-center justify-between bg-white dark:bg-[#0B0F19] transition-colors">
             
             {/* Gauche — flèche retour */}
             {showBack ? (
@@ -37,7 +37,7 @@ const Topbar = ({ title, showBack = true }) => {
                 </button>
                 <button
                     onClick={() => navigate("/settings")}
-                    className="flex items-center justify-center w-9 h-9 rounded-xl border border-black/10 dark:border-white/10 bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
+                    className="flex items-center justify-center w-9 h-9 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors"
                 >
                     <Settings size={16} />
                 </button>

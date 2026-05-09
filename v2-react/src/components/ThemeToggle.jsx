@@ -10,12 +10,12 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="flex items-center justify-center w-11 h-11 rounded-xl border border-black/10 dark:border-white/10 bg-gray-100 dark:bg-white/5 transition-all cursor-pointer"
+      className="flex items-center justify-center w-11 h-11 rounded-xl border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-white/5 transition-all cursor-pointer"
     >
       {darkMode ? (
         <Sun size={20} className="text-white" />
       ) : (
-        <Moon size={20} className="text-black" />
+        <Moon size={20} className="text-gray-700" />
       )}
     </button>
   );

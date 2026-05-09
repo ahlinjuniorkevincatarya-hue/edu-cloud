@@ -76,11 +76,7 @@ const App = () => {
 
       <Route
         path="/workspace"
-        element={
-          <Layout title="Workspace">
-            <Workspace />
-          </Layout>
-        }
+        element={<Workspace />}
       />
 
       <Route

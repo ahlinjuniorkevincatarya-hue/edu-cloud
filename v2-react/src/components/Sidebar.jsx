@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Home, Folder, Bell, Settings, User, Monitor, Menu, X, ChevronRight } from "lucide-react";
+import { Home, Folder, Bell, Settings, User, Server, Menu, X, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const navItems = [
     { name: "Dashboard", path: "/dashboard", icon: Home },
-    { name: "Sessions", path: "/sessions", icon: Monitor },
+    { name: "Sessions", path: "/sessions", icon: Server },
     { name: "Files", path: "/files", icon: Folder },
     { name: "Alerts", path: "/alerts", icon: Bell },
     { name: "Profile", path: "/profile", icon: User },
@@ -37,7 +37,7 @@ const Sidebar = () => {
             <aside className={`
                 fixed md:relative z-50
                 flex flex-col min-h-screen
-                border-r border-black/10 dark:border-white/10
+                border-r border-gray-200 dark:border-white/10
                 bg-white dark:bg-[#0B0F19] text-black dark:text-white
                 transition-all duration-300
                 ${collapsed ? "w-20" : "w-64"}
@@ -49,14 +49,14 @@ const Sidebar = () => {
                     {!collapsed && (
                         <h1 className="text-xl font-bold tracking-wide">
                             <span className="text-black dark:text-white">ENSAM </span>
-                            <span className="text-blue-400">CLOUD</span>
+                            <span className="text-blue-500">CLOUD</span>
                         </h1>
                     )}
                     <div className="flex items-center gap-2 ml-auto">
                         {/* Bouton collapse — desktop */}
                         <button
                             onClick={() => setCollapsed(!collapsed)}
-                            className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-gray-500 dark:text-gray-400"
+                            className="hidden md:flex items-center justify-center w-8 h-8 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors text-gray-400 dark:text-gray-400"
                         >
                             <ChevronRight
                                 size={16}
@@ -66,7 +66,7 @@ const Sidebar = () => {
                         {/* Bouton fermer — mobile */}
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="md:hidden flex items-center justify-center w-8 h-8 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 text-gray-500 dark:text-gray-400"
+                            className="md:hidden flex items-center justify-center w-8 h-8 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 text-gray-400"
                         >
                             <X size={16} />
                         </button>
@@ -88,7 +88,7 @@ const Sidebar = () => {
                                     } ${
                                         isActive
                                             ? "bg-blue-600 text-white"
-                                            : "text-gray-600 dark:text-gray-400 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white"
+                                            : "text-gray-500 dark:text-gray-400 hover:bg-gray-400 dark:hover:bg-white/5 hover:text-black dark:hover:text-white"
                                     }`
                                 }
                             >
@@ -101,7 +101,7 @@ const Sidebar = () => {
 
                 {/* Footer sidebar */}
                 {!collapsed && (
-                    <div className="p-6 border-t border-black/10 dark:border-white/10">
+                    <div className="p-6 border-t border-gray-200 dark:border-white/10">
                         <p className="text-xs text-gray-400 tracking-widest">STUDENT EDITION</p>
                     </div>
                 )}
